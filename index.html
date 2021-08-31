@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-do App</title>
     <link rel="stylesheet" href="./src/style.css">
     <script defer src="./src/index.js"></script>
 </head>
 <body>
-    
+    <div class = "todoGrid">
+        <h1><u>Jane's to-do list</u></h1>
+        <div class = "newTodo">
+            <form>
+                <input type="text" placeholder="Add new to-do item" id="newItem" required />
+                <br>
+                <input type="text" placeholder="Select or add new folder" id="folder" required />
+                <br>
+                <input type="text" placeholder="Due by: dd/mm/yyyy" id="dueDate" onfocus ="(this.type='date')" onblur="(this.type='text')" required />
+                <br>
+                <textarea rows=7 cols=20 placeholder="Add description for to-do item..."></textarea>
+                <br>
+                <input type="submit" value="Add item" id="add" />
+            </form>
+        </div>
+        <div class = "alerts">
+            <div id = "allDone">
+                <h3>All tasks completed.</h3>
+            </div>
+            <div id = "dueSoon">
+                <h3>Due in the next 7 days:</h3>
+                <ul></ul>
+            </div>
+        </div>
+        <div id = "navbar">
+            <h3>My to-do folders:</h3>
+        </div>
+        <div id = "selectedTask">
+            <h3>Task details:</h3>
+        </div>
+    </div>
 </body>
 </html>
