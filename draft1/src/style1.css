@@ -27,17 +27,17 @@ h1, h3 {
     grid-row: auto;
 }
 
-.newTodo {
+.newTodo, #navbar {
     grid-area: col1;
     grid-row: auto;
 }
 
-.alerts {
+.alerts, #selectedTask {
     grid-area: col2;
     grid-row: auto;
 }
 
-form > input {
+form > input, form > textarea {
     display: flex;
     margin: 0px auto;
 }
@@ -60,11 +60,31 @@ form > input {
 .alerts, .newTodo {
     overflow-y: auto;
     max-height: 60vh;
+}
+
+#navbar, #selectedTask {
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.alerts, .newTodo, #navbar, #selectedTask {
     max-width: 95vw;
     border: 1px solid #000080;
     padding: 10px;
 }
 
-#dueSoon {
+#navbar, #selectedTask, #dueSoon {
     display: none;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+

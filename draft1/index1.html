@@ -15,7 +15,11 @@
             <form>
                 <input type="text" placeholder="Add new to-do item" id="newItem" required />
                 <br>
+                <input type="text" placeholder="Select or add new folder" id="folder" required />
+                <br>
                 <input type="text" placeholder="Due by: dd/mm/yyyy" id="dueDate" onfocus ="(this.type='date')" onblur="(this.type='text')" required />
+                <br>
+                <textarea rows=7 cols=20 placeholder="Add description for to-do item..."></textarea>
                 <br>
                 <input type="submit" value="Add item" id="add" />
             </form>
@@ -25,8 +29,15 @@
                 <h3>All tasks completed.</h3>
             </div>
             <div id = "dueSoon">
-                <h3>Outstanding tasks:</h3>
+                <h3>Due in the next 7 days:</h3>
+                <ul></ul>
             </div>
+        </div>
+        <div id = "navbar">
+            <h3>My to-do folders:</h3>
+        </div>
+        <div id = "selectedTask">
+            <h3>Task details:</h3>
         </div>
     </div>
 </body>
