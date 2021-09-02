@@ -52,10 +52,22 @@ function addToDoItem() {
         }
     });
 
-    //Event changes for "edit": - still work in progress
+    //Event changes for "edit":
     edit.addEventListener("mouseover", () => edit.style.cursor = "pointer");
     edit.addEventListener("click", () => {
-
+        const editInput = document.createElement("input");
+        editInput.type = "text";
+        editInput.value = label.innerText;
+        label.style.display = "none";
+        edit.parentNode.insertBefore(editInput, edit);
+        editInput.focus();
+        editInput.addEventListener("keyup", (event) => {
+            if (event.keyCode === 13) {
+                label.style.display = "inline";
+                label.innerText = editInput.value;
+                edit.parentNode.removeChild(editInput);
+            }
+        })
     });
 }
 
