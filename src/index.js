@@ -8,7 +8,9 @@ const completed = document.getElementById("allDone");
 window.onload = newItem.focus();
 
 function addToDoItem() {
-    //create <div><input type = "checkbox"><label for="checkbox">item + due date</label></div>
+    /* create <div><input type = "checkbox"><label for="checkbox">item + due date</label>
+       <img src = "edit.png"> <img src = "delete.svg"> </div>
+    */
     const div = document.createElement("div");
 
     const checkbox = document.createElement("input");
